@@ -1,0 +1,224 @@
+/* 
+body selector targets the entire webpage body
+
+Used to apply global styling
+*/
+body {
+
+    /* Removes default browser margin */
+    margin: 0;
+
+    /* Adds space inside the body */
+    padding: 15px;
+
+    /* Sets font style for entire extension UI */
+
+    /* Segoe UI → primary font */
+    /* Tahoma, Geneva, Verdana → fallback fonts */
+    /* sans-serif → final fallback */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* 
+.container is main wrapper div
+
+Used to organize layout
+*/
+.container {
+
+    /* flex enables flexible layout */
+    display: flex;
+
+    /* flex-direction column → elements arranged vertically */
+    flex-direction: column;
+
+    /* gap adds space between child elements */
+    gap: 20px;
+}
+
+
+
+/* 
+.header section styling
+
+Contains title
+*/
+.header {
+
+    /* adds space below header */
+    padding-bottom: 10px;
+
+    /* adds bottom border line */
+    border-bottom: 1px solid #eee;
+}
+
+
+
+/* 
+.header h2 targets heading inside header
+*/
+.header h2 {
+
+    /* removes default margin */
+    margin: 0px;
+
+    /* sets text color to blue */
+    color: #1a73e8;
+}
+
+
+
+/* 
+.actions section styling
+
+Contains summarize button
+*/
+.actions {
+
+    /* flex layout */
+    display: flex;
+
+    /* space between buttons */
+    gap: 10px;
+
+    /* allows buttons to move to next line if needed */
+    flex-wrap: wrap;
+}
+
+
+
+/* 
+button styling
+
+Applied to all buttons
+*/
+button {
+
+    /* adds space inside button */
+    padding: 8px 16px;
+
+    /* blue background color */
+    background-color: #1a73e8;
+
+    /* text color white */
+    color: white;
+
+    /* removes default border */
+    border: none;
+
+    /* rounded corners */
+    border-radius: 4px;
+
+    /* changes mouse cursor to pointer */
+    cursor: pointer;
+}
+
+
+
+/* 
+button hover effect
+
+Applied when mouse moves over button
+*/
+button:hover {
+
+    /* darker blue color on hover */
+    background-color: #1557b0;
+}
+
+
+
+/* 
+.notes textarea styling
+
+Targets textarea inside notes section
+*/
+.notes textarea {
+
+    /* full width */
+    width: 100%;
+
+    /* fixed height */
+    height: 200px;
+
+    /* inner spacing */
+    padding: 10px;
+
+    /* border color */
+    border: 1px solid #ddd;
+
+    /* rounded corners */
+    border-radius: 4px;
+
+    /* allows vertical resizing only */
+    resize: vertical;
+
+    /* space below textarea */
+    margin-bottom: 10px;
+}
+
+
+
+/* 
+#results styling
+
+Results display container
+*/
+#results {
+
+    /* inner spacing */
+    padding: 10px;
+
+    /* light grey background */
+    background-color: #f8f9fa;
+
+    /* rounded corners */
+    border-radius: 4px;
+
+    /* space above results */
+    margin-top: 20px;
+}
+
+
+
+/* 
+.result-item styling
+
+Each individual result box
+*/
+.result-item {
+
+    /* white background */
+    background: white;
+
+    /* inner spacing */
+    padding: 15px;
+
+    /* rounded corners */
+    border-radius: 4px;
+
+    /* space between result items */
+    margin-bottom: 10px;
+
+    /* shadow effect for card look */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+
+/* 
+.result-content styling
+
+Actual text content inside result
+*/
+.result-content {
+
+    /* space below content */
+    margin-bottom: 10px;
+
+    /* line spacing for readability */
+    line-height: 1.5;
+}

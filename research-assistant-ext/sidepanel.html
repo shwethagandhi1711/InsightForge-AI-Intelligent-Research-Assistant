@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- 
+DOCTYPE declaration tells the browser that this document is HTML5
+This ensures proper rendering and compatibility
+-->
+
+<html lang="en">
+<!-- 
+<html> is the root element of the HTML document
+
+lang="en" specifies the language as English
+This helps browsers and search engines understand the content language
+-->
+
+<head>
+
+    <!-- 
+    <head> contains metadata about the webpage
+    Metadata is not visible to the user
+    -->
+
+    <title>Research Assistant</title>
+
+    <!-- 
+    <title> sets the title of the page
+
+    This title appears:
+
+    • On browser tab
+    • In extension side panel title
+    -->
+
+
+
+    <link rel="stylesheet" href="sidepanel.css">
+
+    <!-- 
+    link tag is used to connect external CSS file
+
+    rel="stylesheet" → tells browser this is a CSS file
+
+    href="sidepanel.css" → path of CSS file
+
+    This file is used to style:
+
+    • Layout
+    • Buttons
+    • Textarea
+    • Colors
+    • Spacing
+    -->
+
+</head>
+
+
+
+<body>
+
+    <!-- 
+    <body> contains all visible content shown to the user
+    -->
+
+
+
+    <div class="container">
+
+        <!-- 
+        Main container div
+
+        Used to wrap entire extension UI
+
+        container class is used in CSS for styling layout
+        -->
+
+
+        <div class="header">
+
+            <!-- 
+            Header section of extension
+
+            Used to display title
+            -->
+
+            <h2>Research Assistant</h2>
+
+            <!-- 
+            h2 is heading tag
+
+            Displays main title of extension
+            -->
+
+        </div>
+
+
+
+        <div class="actions">
+
+            <!-- 
+            actions section contains buttons related to operations
+
+            Here it contains summarize button
+            -->
+
+
+            <button id="summarizeBtn">Summarize</button>
+
+            <!-- 
+            button creates clickable button
+
+            id="summarizeBtn" is used in JavaScript
+
+            sidepanel.js uses this id to:
+
+            detect button click
+            perform summarization
+            -->
+
+        </div>
+
+
+
+
+        <div class="notes">
+
+            <!-- 
+            notes section is used for writing and saving research notes
+            -->
+
+
+            <h3>Research Notes</h3>
+
+            <!-- 
+            h3 is sub-heading
+            -->
+
+
+
+            <textarea id="notes" placeholder="Take notes here"></textarea>
+
+            <!-- 
+            textarea is used to enter multi-line text
+
+            id="notes" is used in JavaScript to:
+
+            • get notes
+            • save notes
+            • load notes
+
+
+            placeholder shows default text when empty
+            -->
+
+
+
+            <button id="saveNotesBtn">Save Notes</button>
+
+            <!-- 
+            Save Notes button
+
+            id="saveNotesBtn is used in sidepanel.js
+
+            When clicked:
+
+            Notes are saved using chrome.storage.local
+            -->
+
+        </div>
+
+
+
+
+        <div id="results"></div>
+
+        <!-- 
+        results div is used to display output
+
+        Example:
+
+        • summarized text
+        • error message
+        • response from backend
+
+
+        sidepanel.js updates this dynamically
+        using:
+
+        document.getElementById('results').innerHTML
+        -->
+
+
+    </div>
+
+
+
+    <script src="sidepanel.js"></script>
+
+    <!-- 
+    script tag connects JavaScript file
+
+    sidepanel.js contains logic for:
+
+    • summarize text
+    • save notes
+    • call backend API
+    • display results
+
+
+    This makes extension interactive
+    -->
+
+
+
+</body>
+</html>
