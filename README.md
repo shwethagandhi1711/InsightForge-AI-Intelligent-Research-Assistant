@@ -1,314 +1,293 @@
 # InsightForge-AI-Intelligent-Research-Assistant
 
-# 🤖 AI Research Assistant
+📌 Project Overview
 
-## 📌 Project Overview
+Research Assistant is an AI-powered Chrome Extension integrated with a Spring Boot backend and Gemini API that helps users summarize selected text from any webpage instantly.
 
-**AI Research Assistant** is an intelligent web application that helps users perform research-related tasks such as **summarization, explanation, and content analysis** using advanced AI. It integrates with **Google Gemini API** to generate accurate, fast, and context-aware responses.
+The extension sends selected content to the backend, which processes it using Google's Gemini AI and returns a summarized response.
 
-This tool is useful for **students, researchers, developers, and professionals** to quickly understand large content without reading everything manually.
+This project demonstrates real-world full stack development with AI integration.
 
----
+🎯 Project Objectives
 
-## 🎯 Project Objectives
+• Provide AI-based text summarization
+• Help users understand content faster
+• Improve research productivity
+• Integrate Chrome Extension with Spring Boot
+• Use Gemini API for intelligent responses
+• Build a real-world AI powered application
 
-The main objectives of this project are:
+🛠️ Technology Stack
+Frontend (Chrome Extension)
 
-* To automate research-related tasks using AI
-* To summarize long content into short, meaningful information
-* To explain complex topics in simple terms
-* To save time and improve productivity
-* To provide an easy-to-use interface for AI-powered research
+HTML
 
----
+CSS
 
-## 🛠️ Technology Stack
+JavaScript
 
-### Frontend
+Chrome Extension Manifest V3
 
-* React.js
-* HTML5
-* CSS3
-* JavaScript
-* Bootstrap
+Backend
 
-### Backend
+Java 17
 
-* Java
-* Spring Boot
-* Spring Web
-* Spring WebFlux (WebClient)
+Spring Boot
 
-### AI Integration
+Spring WebFlux (WebClient)
 
-* Google Gemini API
+AI Integration
 
-### Tools
+Gemini Pro API
 
-* VS Code
-* IntelliJ / Eclipse
-* Postman
-* Git & GitHub
+Tools
 
----
+IntelliJ / Eclipse
 
-## ⚙️ Core Modules Description
+VS Code
 
-### 1. User Interface Module
+Chrome Browser
 
-* Accepts research content from user
-* Displays AI response
-* Provides simple and clean UI
+GitHub
 
-### 2. AI Processing Module
+🧩 Core Modules Description
+1️⃣ Chrome Extension Module
 
-* Sends user content to Gemini API
-* Receives AI-generated response
-* Processes and formats output
+Files:
 
-### 3. Backend Module
+manifest.json
+background.js
+sidepanel.html
+sidepanel.js
+sidepanel.css
 
-* Handles REST API requests
-* Connects frontend and Gemini API
-* Manages business logic
+Function:
 
-### 4. Integration Module
+• Extract selected text
+• Send request to backend
+• Display summary
+• Save notes
 
-* Uses WebClient to call Gemini API
-* Handles authentication
-* Processes API responses
+2️⃣ Controller Layer
 
----
+File:
 
-## 🔄 Workflow and Architecture
+ResearchController.java
 
-### Workflow Steps:
+Function:
 
-1. User enters content
-2. Frontend sends request to Spring Boot backend
-3. Backend calls Gemini API
-4. Gemini processes content
-5. Response returned to backend
-6. Backend sends response to frontend
-7. Frontend displays result
+• Handles API requests
+• Sends request to service layer
+• Returns response
 
-### Architecture Diagram (Logical)
+Endpoint:
 
-```
+POST /api/research/process
+3️⃣ Service Layer
+
+File:
+
+ResearchService.java
+
+Function:
+
+• Creates prompt
+• Calls Gemini API
+• Processes response
+
+4️⃣ DTO Layer
+
+Files:
+
+ResearchRequest.java
+GeminiResponse.java
+
+Function:
+
+• Transfer request and response data
+
+5️⃣ Configuration Layer
+
+File:
+
+WebClientConfig.java
+
+Function:
+
+• Configure WebClient
+• Configure ObjectMapper
+
+⚙️ Workflow and Architecture
+Workflow
+
+User selects text
+
+User opens extension
+
+Extension extracts text
+
+Sends request to backend
+
+Backend calls Gemini API
+
+Gemini processes request
+
+Backend receives response
+
+Extension displays summary
+
+Architecture
 User
  ↓
-Frontend (React)
+Chrome Extension
  ↓
-Backend (Spring Boot)
+Spring Boot Backend
  ↓
 Gemini API
  ↓
 Backend
  ↓
-Frontend
+Extension
  ↓
 User
-```
+🗄️ Database Design
 
----
+This project currently uses:
 
-## 🗄️ Database Design
+Chrome Local Storage
 
-❌ This project currently does not use a database.
+chrome.storage.local
 
-Future version may include:
+Purpose:
 
-| Table            | Purpose                 |
-| ---------------- | ----------------------- |
-| Users            | Store user details      |
-| Research_History | Store previous research |
+• Save research notes
 
----
+Future support:
 
-## 💻 Installation and Setup
+• MySQL
+• MongoDB
 
-### Step 1: Clone Repository
+⚙️ Installation and Setup
+Step 1: Clone Repository
+git clone https://github.com/yourusername/research-assistant.git
+Step 2: Backend Setup
 
-```bash
-git clone https://github.com/yourusername/ai-research-assistant.git
-```
-
----
-
-### Step 2: Backend Setup
-
-Open project in IntelliJ / Eclipse
+Open in IntelliJ or Eclipse
 
 Run:
 
-```
 ResearchAssistantApplication.java
-```
 
-Runs on:
+Server starts at:
 
-```
 http://localhost:8080
-```
+Step 3: Load Chrome Extension
 
----
+Open Chrome
 
-### Step 3: Frontend Setup
+Go to:
 
-```bash
-cd frontend
-npm install
-npm start
-```
+chrome://extensions/
 
-Runs on:
+Enable:
 
-```
-http://localhost:3000
-```
-
----
-
-## 🔑 How to Get Gemini API Key
-
-Follow these steps:
-
-### Step 1: Go to Google AI Studio
-
-Visit:
-
-https://aistudio.google.com/
-
-Sign in using your Google account.
-
----
-
-### Step 2: Create API Key
+Developer Mode
 
 Click:
 
-**Get API Key**
+Load Unpacked
 
-Then click:
+Select extension folder
 
-**Create API Key**
+🔑 Gemini API Key Setup
+Step 1: Open
 
----
+https://aistudio.google.com/app/apikey
 
-### Step 3: Copy API Key
+Step 2: Login with Google Account
+Step 3: Click
+
+Create API Key
+
+Step 4: Copy API Key
 
 Example:
 
-```
-AIzaSyXXXXXXXXXXXXXXX
-```
+AIzaSyXXXXXX
+Step 5: Set Environment Variables
 
----
+Windows:
 
-### Step 4: Add API Key in application.properties
+set GEMINI_KEY=your_api_key
+set GEMINI_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=
 
-```
-gemini.api.key=YOUR_API_KEY
-```
+Mac/Linux:
 
----
-
-## 🚀 How to Use
+export GEMINI_KEY=your_api_key
+export GEMINI_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=
+▶️ How to Use
 
 Step 1:
 
-Open application
+Select text from webpage
 
 Step 2:
 
-Enter research content like:
-
-```
-Artificial Intelligence is transforming the world...
-```
+Click extension icon
 
 Step 3:
 
-Click Submit
+Click Summarize
 
 Step 4:
 
 View result
 
-Example output:
+Step 5:
 
-```
-AI is changing industries by automating tasks and improving efficiency.
-```
+Save notes
 
----
+🔗 REST API Endpoints
+Process Content
 
-## 🔗 REST API Endpoints
+URL:
 
-### 1. Process Research Content
-
-**POST**
-
-```
-/api/research/process
-```
-
-Request Body:
-
-```json
+POST /api/research/process
+Request
 {
   "content": "Artificial Intelligence is transforming industries",
   "operation": "summarize"
 }
-```
+Response
+Artificial Intelligence is rapidly transforming industries by...
+✅ Advantages
 
-Response:
+• Saves time
+• Easy to use
+• AI powered
+• Improves productivity
+• Real-time processing
+• Lightweight
 
-```json
-{
-  "response": "AI is transforming industries by automating tasks."
-}
-```
+🚀 Future Enhancements
 
----
+• Explain feature
+• Rewrite feature
+• Multi language support
+• Database integration
+• User authentication
+• Cloud deployment
+• Chrome Web Store publishing
 
-## ✅ Advantages
+🎓 Conclusion
 
-* Saves time
-* Fast results
-* Easy to use
-* Accurate responses
-* Improves productivity
-* Reduces manual research effort
+Research Assistant is an AI powered Chrome Extension integrated with Spring Boot and Gemini API.
 
----
+It demonstrates:
 
-## 🔮 Future Enhancements
+• Full Stack Development
+• AI Integration
+• Chrome Extension Development
+• REST API Development
 
-Future improvements:
-
-* Add user login system
-* Save research history
-* Add PDF upload
-* Add document download
-* Add voice input
-* Add multi-language support
-* Add chatbot feature
-
----
-
-## 🏁 Conclusion
-
-AI Research Assistant is a powerful tool that uses **Google Gemini AI** to help users perform research tasks easily and efficiently.
-
-It reduces manual effort, improves productivity, and makes research faster and smarter.
-
-This project demonstrates:
-
-* Spring Boot integration with Gemini
-* REST API development
-* AI integration
-* Full stack development
-
----
-
+This project is useful for students, researchers, and professionals.
