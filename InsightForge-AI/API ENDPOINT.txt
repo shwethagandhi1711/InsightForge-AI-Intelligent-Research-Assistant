@@ -58,6 +58,8 @@ Based on the provided content, here are suggested related topics and further rea
 *   **Documentation for HTTP Client Libraries:** For example, Python's `requests` library, JavaScript's `fetch` API or `axios`, Java's `HttpClient`, etc., if you're not using an SDK.
 *   **Introduction to Programming Language Tutorials:** If you're new to the language you intend to use for API integration.
 
+SUMMARY API ENDPOINT
+
 POST http://localhost:8080/api/research/process
 
 {
@@ -66,6 +68,8 @@ POST http://localhost:8080/api/research/process
 }
 
 This API reference describes the standard, streaming, and real-time REST APIs for interacting with Gemini models, which can be used in any environment supporting HTTP requests. A Quickstart guide is available to help users make their first API call. For language-specific libraries and SDKs, users should refer to the SDK references in the left navigation.
+
+POINTS API ENDPOINT
 
 POST http://localhost:8080/api/research/process
 
