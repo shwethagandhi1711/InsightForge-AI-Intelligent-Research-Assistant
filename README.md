@@ -78,6 +78,7 @@ The main objectives of this project are:
 • Github
 
 • Github Desktop
+
 ---
 
 # 🧩 Core Modules
