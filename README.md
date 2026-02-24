@@ -432,8 +432,13 @@ Response
 ```bash
 Artificial Intelligence is transforming industries by automating tasks and improving efficiency.
 ```
----
+Refer API ENDPOINT folder for Api endpoints.
 
+---
+# 🗄️ Output
+Refer InsightForge-AI folder for output screenshots.
+
+---
 # ✅ Advantages
 
 • Saves research time
