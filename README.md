@@ -304,31 +304,79 @@ gemini.api.key=YOUR_API_KEY
 
 # 🔑 How to Get Gemini API Key
 
-• Step 1:
+### Go to Google AI Studio
 
-Go to:
-
-https://makersuite.google.com/app/apikey
-
-• Step 2:
+https://aistudio.google.com/
 
 Login with Google account
 
-• Step 3:
+---
 
-Click:
+### Click
+
+```id="arch002"
+Get API Key
+
+↓
 
 Create API Key
 
-• Step 4:
+↓
 
-Copy API key
+Copy API Key
+```
 
-• Step 5:
+Example:
 
-Paste in:
+```
+AIzaSyXXXXXXXXXXXX
+```
+
+---
+
+## Step 3: Configure API Key
+
+Open:
 
 application.properties
+
+```
+spring.application.name=email-writer-sb
+
+gemini.api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=
+
+gemini.api.key=YOUR_API_KEY
+```
+
+Example:
+
+```
+gemini.api.key=AIzaSyXXXX
+```
+
+---
+
+## Recommended Secure Method 🔐
+
+Use environment variable
+
+Windows:
+
+```
+set GEMINI_KEY=your_key
+```
+
+Mac/Linux:
+
+```
+export GEMINI_KEY=your_key
+```
+
+application.properties:
+
+```
+gemini.api.key=${GEMINI_KEY}
+```
 
 ### ▶ How to Use
 
