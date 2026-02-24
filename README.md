@@ -53,8 +53,6 @@ The main objectives of this project are:
 
 • Chrome Storage API
 
----
-
 ### Backend
 
 • Java
@@ -63,13 +61,9 @@ The main objectives of this project are:
 
 • Spring WebFlux (WebClient)
 
----
-
 ### AI Integration
 
 • Google Gemini API
-
----
 
 ### Tools
 
