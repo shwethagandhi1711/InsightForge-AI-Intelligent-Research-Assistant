@@ -5,7 +5,7 @@ It integrates a Chrome Extension frontend with a Spring Boot backend and Google 
 
 ---
 
-### 🚀 Project Overview
+# 🚀 Project Overview
 
 The Research Assistant is designed to improve productivity during online research by allowing users to:
 
@@ -21,7 +21,7 @@ The system connects the Chrome Extension with a Spring Boot backend, which commu
 
 ---
 
-### 🎯 Project Objectives
+# 🎯 Project Objectives
 
 The main objectives of this project are:
 
@@ -39,7 +39,7 @@ The main objectives of this project are:
 
 ---
 
-### 🛠 Technology Stack
+# 🛠 Technology Stack
 
 ### Frontend (Chrome Extension)
 
@@ -53,6 +53,8 @@ The main objectives of this project are:
 
 • Chrome Storage API
 
+---
+
 ### Backend
 
 • Java
@@ -61,10 +63,13 @@ The main objectives of this project are:
 
 • Spring WebFlux (WebClient)
 
+---
 
 ### AI Integration
 
 • Google Gemini API
+
+---
 
 ### Tools
 
@@ -79,10 +84,11 @@ The main objectives of this project are:
 • Github
 
 • Github Desktop
+---
 
-### 🧩 Core Modules
+# 🧩 Core Modules
 
-### 1. Chrome Extension Side Panel
+## 1. Chrome Extension Side Panel
 
 ### Files:
 
@@ -108,7 +114,7 @@ The main objectives of this project are:
 
 • Saves notes locally
 
-### 2. Controller Layer
+## 2. Controller Layer
 
 ### File:
 
@@ -127,48 +133,49 @@ The main objectives of this project are:
 ```bash
 POST /api/research/process
 ```
-3. Service Layer
+## 3. Service Layer
 
-File:
+### File:
 
-ResearchService.java
+• ResearchService.java
 
-Function:
+### Function:
 
-Build prompt
+• Build prompt
 
-Call Gemini API
+• Call Gemini API
 
-Parse response
+• Parse response
 
-Return summary
+• Return summary
 
-4. DTO Module
+## 4. DTO Module
 
-Files:
+### Files:
 
-ResearchRequest.java
-GeminiResponse.java
+• ResearchRequest.java
 
-Function:
+• GeminiResponse.java
 
-Transfer data
+### Function:
 
-Map JSON response
+• Transfer data
 
-5. Configuration Module
+• Map JSON response
 
-File:
+## 5. Configuration Module
 
-WebClientConfig.java
+### File:
 
-Function:
+• WebClientConfig.java
 
-Configure WebClient
+### Function:
 
-Configure ObjectMapper
+• Configure WebClient
 
+• Configure ObjectMapper
 
+----
 
 🔄 Workflow and Architecture
 Step 1
