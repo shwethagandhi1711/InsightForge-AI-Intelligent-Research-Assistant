@@ -253,7 +253,7 @@ MongoDB
 • Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/research-assistant.git
+git clone https://github.com/shwethagandhi1711/InsightForge-AI-Intelligent-Research-Assistant.git
 ```
 
 • Step 2: Backend Setup
