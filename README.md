@@ -172,7 +172,7 @@ POST /api/research/process
 
 ----
 
-# 🔄 Workflow and Architecture
+# 🔄 Workflow 
 
 • Step 1
 
