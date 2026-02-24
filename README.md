@@ -59,6 +59,8 @@ The main objectives of this project are:
 
 • Spring Boot
 
+• Project Lombok
+
 • Spring WebFlux (WebClient)
 
 ### AI Integration
