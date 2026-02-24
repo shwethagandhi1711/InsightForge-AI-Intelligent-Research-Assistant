@@ -171,45 +171,52 @@ POST /api/research/process
 
 ----
 
-🔄 Workflow and Architecture
-Step 1
+# 🔄 Workflow and Architecture
+
+• Step 1
 
 User selects text on webpage
 
-Step 2
+• Step 2
 
 User clicks Chrome Extension
 
-Step 3
+• Step 3
 
 Side Panel opens
 
-Step 4
+• Step 4
 
 User clicks Summarize
 
-Step 5
+• Step 5
 
 Chrome Extension sends request to Spring Boot API
 
+```bash
 POST /api/research/process
-Step 6
+```
+
+• Step 6
 
 Spring Boot sends request to Gemini API
 
-Step 7
+• Step 7
 
 Gemini generates summary
 
-Step 8
+• Step 8
 
 Summary returned to Chrome Extension
 
-Step 9
+• Step 9
 
 Summary displayed in Side Panel
 
-🏗 Architecture Diagram (Text Representation)
+---
+# 🏗 Architecture Diagram 
+
+```id="arch001"
 User
  ↓
 Chrome Extension (Side Panel)
@@ -223,7 +230,9 @@ Spring Boot Backend
 Chrome Extension
  ↓
 User sees summary
-🗄 Database Design
+```
+---
+# 🗄 Database Design
 
 This project currently does not use database.
 
@@ -237,12 +246,18 @@ MySQL
 
 MongoDB
 
-⚙ Installation and Setup
-Step 1: Clone Repository
-git clone https://github.com/yourusername/research-assistant.git
-Step 2: Backend Setup
+---
+# ⚙ Installation and Setup
 
-Open project in IntelliJ / Eclipse
+• Step 1: Clone Repository
+
+```bash
+git clone https://github.com/yourusername/research-assistant.git
+```
+
+• Step 2: Backend Setup
+
+Open project in IntelliJ 
 
 Run:
 
@@ -250,8 +265,11 @@ ResearchAssistantApplication.java
 
 Backend runs at:
 
+```bash
 http://localhost:8080
-Step 3: Setup Chrome Extension
+```
+
+• Step 3: Setup Chrome Extension
 
 Open Chrome
 
@@ -269,7 +287,7 @@ Load Unpacked
 
 Select extension folder
 
-Step 4: Add Gemini API Key
+• Step 4: Add Gemini API Key
 
 Open:
 
@@ -277,122 +295,128 @@ application.properties
 
 Add:
 
+```bash
 gemini.api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=
 
 gemini.api.key=YOUR_API_KEY
-🔑 How to Get Gemini API Key
+```
+---
 
-Step 1:
+# 🔑 How to Get Gemini API Key
+
+• Step 1:
 
 Go to:
 
 https://makersuite.google.com/app/apikey
 
-Step 2:
+• Step 2:
 
 Login with Google account
 
-Step 3:
+• Step 3:
 
 Click:
 
 Create API Key
 
-Step 4:
+• Step 4:
 
 Copy API key
 
-Step 5:
+• Step 5:
 
 Paste in:
 
 application.properties
 
-▶ How to Use
+### ▶ How to Use
 
-Step 1
+• Step 1
 
 Start Spring Boot backend
 
-Step 2
+• Step 2
 
 Open Chrome
 
-Step 3
+• Step 3
 
 Open any website
 
-Step 4
+• Step 4
 
 Select text
 
-Step 5
+• Step 5
 
 Click Extension icon
 
-Step 6
+• Step 6
 
 Click Summarize
 
-Step 7
+• Step 7
 
 View AI Summary
 
-🌐 REST API Endpoints
-Process Content
-URL
+---
+
+# 🌐 REST API Endpoints
+
+### Process Content
+
+```bash
 POST /api/research/process
+```
+
 Request Body
+
+```bash
 {
   "content": "Artificial Intelligence is transforming industries",
   "operation": "summarize"
 }
+```
 Response
+
+```bash
 Artificial Intelligence is transforming industries by automating tasks and improving efficiency.
-✅ Advantages
+```
+---
 
-Saves research time
+# ✅ Advantages
 
-Provides instant AI summaries
+• Saves research time
 
-Easy to use Chrome Extension
+• Provides instant AI summaries
 
-Real time processing
+• Easy to use Chrome Extension
 
-Full stack implementation
+• Improves productivity
 
-Uses modern AI technology
+• Works on any website
 
-🔮 Future Enhancements
+• Lightweight
 
-Add Translate feature
+• Secure API integration
 
-Add Question Answer feature
+---
 
-Save notes to database
+# 🔮 Future Enhancements
 
-Add authentication
+• Add Translate feature
 
-Deploy to cloud
+• Add Question Answer feature
 
-Publish on Chrome Web Store
+• Save notes to database
 
-🧠 Learning Outcomes
+• Add authentication
 
-This project demonstrates:
+• Deploy to cloud
 
-Chrome Extension development
+---
 
-Spring Boot REST API
-
-Gemini API integration
-
-WebClient usage
-
-Full Stack Development
-
-AI integration in real applications
-
-🏁 Conclusion
+# 🏁 Conclusion
 
 The Research Assistant is an AI-powered Chrome Extension integrated with Spring Boot and Gemini API that helps users quickly summarize and understand webpage content. It demonstrates real-world implementation of Chrome Extension development, REST API integration, and AI usage. This project improves research productivity, saves time, and showcases strong full-stack development skills with modern AI integration.
