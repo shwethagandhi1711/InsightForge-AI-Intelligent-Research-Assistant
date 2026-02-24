@@ -1,4 +1,4 @@
-### 📚 InsightForge-AI-Intelligent-Research-Assistant
+# 📚 InsightForge-AI-Intelligent-Research-Assistant
 
 An AI-powered Research Assistant Chrome Extension that helps users summarize selected webpage content and save research notes instantly.
 It integrates a Chrome Extension frontend with a Spring Boot backend and Google Gemini API to generate intelligent summaries in real time.
